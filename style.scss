@@ -1,0 +1,75 @@
+$font-stack: Arial, Helvetica, sans-serif;
+$light-color: #f4f4f4;
+$primary-color: #C8B2AD;
+$secondary-color: #AB9894;
+
+@mixin gradient($color1, $color2) {
+    background: linear-gradient(to right, $color1, $color2);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $primary-color;
+    font-family: $font-stack;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    @include gradient($secondary-color, $light-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .heading {
+        color: black;
+        text-align: center;
+    }
+
+    .budget-display {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .budget-item h3 {
+        margin: 0;
+    }
+
+    .input-section {
+        text-align: center;
+    }
+
+    input {
+        padding: 10px;
+        margin: 5px;
+        border: 1px solid $light-color;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: $secondary-color;
+        color: $light-color;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+#error-message {
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}

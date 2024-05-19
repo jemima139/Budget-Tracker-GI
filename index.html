@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Budget Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Budget Tracker</h1>
+        <div class="budget-display">
+            <div class="budget-item">
+                <h3>Total Budget:</h3>
+                <span id="total-budget">$0.00</span>
+            </div>
+            <div class="budget-item">
+                <h3>Total Income:</h3>
+                <span id="total-income">$0.00</span>
+            </div>
+            <div class="budget-item">
+                <h3>Total Expenses:</h3>
+                <span id="total-expense">$0.00</span>
+            </div>
+        </div>
+        <div class="input-section">
+            <div>
+                <input type="date" id="transactionDate" name="date" required>
+                <input list="description-options" id="description" placeholder="Description">
+                <datalist id="description-options">
+                    <option value="Income">
+                    <option value="Rent">
+                    <option value="Utility">
+                    <option value="Phone">
+                    <option value="Grocery">
+                    <option value="Miscellaneous">
+                </datalist>
+                <input type="number" id="amount" placeholder="Amount">
+                <button type="button" id="addincome">Add Income</button>
+                <button type="button" id="addexpense">Add Expense</button>
+                <button type="button" id="clear">Clear</button>
+                <button type="button" id="allclear">All Clear</button>
+            </div>
+        </div>
+        <div id="error-message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
